@@ -1,29 +1,10 @@
-"""
-image_io.py  -  read and write real image files using only core Python.
-
-WHAT IS A PGM FILE?
--------------------
-PGM ("Portable GrayMap") is the simplest grayscale image format. A file looks like:
-
-    P5            <- "magic number": P5 = raw bytes, P2 = numbers written as text
-    200 150       <- width and height
-    255           <- the maximum pixel value
-    <200*150 pixel bytes, one byte per pixel, row by row from the top-left>
-
-That is all! Reading it means: read the header, then turn the pixel bytes into
-a list of lists, exactly the grid our image_processor.py already uses.
-"""
 
 import struct
 import zlib
 
 
 def _read_header_tokens(data, count):
-    """
-    Read `count` whitespace-separated words from the start of a PGM file.
-    Lines starting with # are comments and are skipped.
-    Returns (the words, position in the file just after the last word).
-    """
+   
     words = []
     i = 0
     n = len(data)
@@ -87,11 +68,7 @@ def _png_chunk(tag, body):
 
 
 def save_png(image, path):
-    """
-    Save a grayscale image as a PNG so ANY image viewer can open it.
-    (PGM files are not shown by many programs, PNG is shown by all.)
-    Uses only Python's built-in struct and zlib modules.
-    """
+  
     height = len(image)
     width = len(image[0])
     # Each PNG row starts with a "filter type" byte; 0 means "no filter".
