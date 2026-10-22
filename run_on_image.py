@@ -1,13 +1,4 @@
-"""
-run_on_image.py  -  apply our operations to a REAL image.
 
-Usage:
-    python3 run_on_image.py photo.pgm
-
-It loads the PGM, applies every operation from image_processor.py, and saves
-each result as a PNG in a folder called  results/  so you can look at them.
-(Big images have thousands of numbers, so we save pictures instead of printing.)
-"""
 
 import os
 import sys
@@ -22,7 +13,7 @@ from image_processor import (
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python3 run_on_image.py your_image.pgm")
+        print("Usage: python run_on_image.py your_image.pgm")
         return
 
     image = load_pgm(sys.argv[1])
