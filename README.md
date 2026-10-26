@@ -16,7 +16,7 @@ img = [
 ]
 ```
 
-> Replace the example above with the actual test image from your code.
+> e.
 
 ## Design rule: no mutation
 
@@ -78,26 +78,22 @@ Each output pixel is computed from the pixel and its neighbors using a small gri
 | `box_blur(img)` | Applies a 3x3 averaging kernel, which smooths the image. |
 | `edge_detect(img)` | Applies a Sobel-style kernel, which highlights places where brightness changes sharply. |
 
-#### Border handling
-
-**Choice:** _(write your choice here: zero padding / edge replication / skip borders / shrink output)_
-
-**Why:** _(explain in 2 to 3 sentences. For example: what happens to an edge pixel with missing neighbors, what trade-off your choice makes, and why it suits this use case.)_
 
 ## Output
-
-Paste the real terminal output from your run under each heading, so a reader can verify it without running the code. Then add one or two sentences saying what to notice.
 
 ### Original
 
 ```
-(paste output)
+<img width="1876" height="891" alt="original" src="https://github.com/user-attachments/assets/37da7800-408a-4f7a-ad3a-285490760fae" />
+
+
 ```
 
 ### Invert
 
 ```
-(paste before/after)
+<img width="1876" height="891" alt="invert" src="https://github.com/user-attachments/assets/1fd23608-8be5-452e-8bc6-e4e1fb1ae3bd" />
+
 ```
 
 What it shows: _(for example: every value is flipped around 127.5)_
@@ -105,7 +101,8 @@ What it shows: _(for example: every value is flipped around 127.5)_
 ### Brightness
 
 ```
-(paste before/after)
+<img width="1876" height="891" alt="brightness_plus_60" src="https://github.com/user-attachments/assets/b187b15f-d2e4-4257-874e-321a3242ad2b" />
+
 ```
 
 What it shows: _(mention the clamping at 0 and 255)_
@@ -113,19 +110,22 @@ What it shows: _(mention the clamping at 0 and 255)_
 ### Threshold
 
 ```
-(paste before/after)
+<img width="1876" height="891" alt="threshold_128" src="https://github.com/user-attachments/assets/b5f3d708-44fc-4274-b9a3-bc573b983d6c" />
+
 ```
 
 ### Flip horizontal / vertical
 
 ```
-(paste before/after)
+<img width="1876" height="891" alt="flip_horizontal" src="https://github.com/user-attachments/assets/7eb593b8-e937-4389-9dc4-ddd51f20cc5d" />
+
 ```
 
 ### Rotate 90°
 
 ```
-(paste before/after)
+<img width="891" height="1876" alt="rotate_90" src="https://github.com/user-attachments/assets/79b35252-e677-49d3-ae97-62903decf435" />
+
 ```
 
 What it shows: _(use a non-square image so the dimension swap is visible)_
@@ -133,13 +133,15 @@ What it shows: _(use a non-square image so the dimension swap is visible)_
 ### Crop
 
 ```
-(paste before/after)
+<img width="938" height="445" alt="crop_center" src="https://github.com/user-attachments/assets/8c0c2add-76bc-4917-b7e0-6a0b2435f271" />
+
 ```
 
 ### Box blur
 
 ```
-(paste before/after)
+<img width="1876" height="891" alt="box_blur" src="https://github.com/user-attachments/assets/e0dbdd4e-15d9-476c-a9b6-c40da24d9f3f" />
+
 ```
 
 What it shows: _(sharp transitions get softer; describe what happens at the borders)_
@@ -147,20 +149,17 @@ What it shows: _(sharp transitions get softer; describe what happens at the bord
 ### Edge detection
 
 ```
-(paste before/after)
+<img width="1876" height="891" alt="edge_detect" src="https://github.com/user-attachments/assets/1ea18dea-41a6-4f55-83d6-2ec283ccc358" />
+
 ```
 
 What it shows: _(strong values appear where brightness changes, and flat regions go to 0)_
 
-## Bonus (if completed)
-
-- **PPM loading:** _(describe how the file is parsed: header, then pixel values)_
-- **RGB support:** _(describe how operations are applied per channel)_
 
 ## What I learned / limitations
 
 - Pure Python loops are slow on large images. Libraries like NumPy do the same work in optimized compiled code.
-- _(add your own observation, for example about border effects or clamping)_
+-
 
 ## Resources
 
